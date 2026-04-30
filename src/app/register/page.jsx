@@ -9,6 +9,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 
 const RegisterPage = () => {
   const onSubmit = (e) => {
@@ -76,6 +77,12 @@ const RegisterPage = () => {
           <Button type="reset" variant="secondary">
             Reset
           </Button>
+        </div>
+        <div className="flex items-center gap-2">
+          <p className="text-white">Already have an Account?</p>
+          <Link className="underline text-red-400" href={"/login"}>
+            Login
+          </Link>
         </div>
       </Form>
     </div>
