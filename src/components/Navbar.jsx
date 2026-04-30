@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="sticky top-0 z-40">
       {/* Basic */}
-      <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
+      <nav className=" w-full border-b border-separator bg-background/70 backdrop-blur-lg">
         <header className="flex flex-col sm:flex-row h-16 items-center container mx-auto justify-between px-6">
           <div className="flex items-center gap-3">
             <Link href="/" className="no-underline">

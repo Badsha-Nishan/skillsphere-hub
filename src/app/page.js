@@ -39,7 +39,7 @@ export default function Home() {
           <img src="/hero.png" alt="Hero" className="w-full max-w-md" />
         </div>
       </section>
-        <CourseCard />
+      <CourseCard />
       <LearningTips />
       <TopInstructors />
     </div>
