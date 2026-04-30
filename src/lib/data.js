@@ -1,0 +1,74 @@
+export const courses = [
+  {
+    id: 1,
+    title: "Complete Web Development Bootcamp",
+    instructor: "John Doe",
+    duration: "20 hours",
+    rating: 4.8,
+    level: "Beginner",
+    description:
+      "Learn full-stack web development from scratch with HTML, CSS, JavaScript, React, and Node.js.",
+    image: "https://i.postimg.cc/0QbVxWm7/web-dev.jpg",
+    category: "Development",
+  },
+  {
+    id: 2,
+    title: "UI/UX Design Masterclass",
+    instructor: "Sarah Ahmed",
+    duration: "12 hours",
+    rating: 4.7,
+    level: "Beginner",
+    description:
+      "Master modern UI/UX design principles, wireframing, and prototyping using Figma.",
+    image: "https://i.postimg.cc/XY7t8kZ3/uiux.jpg",
+    category: "Design",
+  },
+  {
+    id: 3,
+    title: "Digital Marketing Fundamentals",
+    instructor: "Michael Brown",
+    duration: "10 hours",
+    rating: 4.6,
+    level: "Beginner",
+    description:
+      "Learn SEO, social media marketing, email campaigns, and online branding strategies.",
+    image: "https://i.postimg.cc/5y7qJk9m/marketing.jpg",
+    category: "Marketing",
+  },
+  {
+    id: 4,
+    title: "Advanced React & Next.js",
+    instructor: "Emily Carter",
+    duration: "18 hours",
+    rating: 4.9,
+    level: "Advanced",
+    description:
+      "Build modern full-stack applications using React, Next.js, and server-side rendering.",
+    image: "https://i.postimg.cc/7Y8hJk2p/react-next.jpg",
+    category: "Development",
+  },
+  {
+    id: 5,
+    title: "Python for Data Science",
+    instructor: "David Wilson",
+    duration: "15 hours",
+    rating: 4.8,
+    level: "Intermediate",
+    description:
+      "Learn Python, Pandas, NumPy, and data visualization for real-world data analysis.",
+    image: "https://i.postimg.cc/9QxVh3Lm/python-data.jpg",
+    category: "Data Science",
+  },
+  {
+    id: 6,
+    title: "Graphic Design Essentials",
+    instructor: "Laura Johnson",
+    duration: "8 hours",
+    rating: 4.5,
+    level: "Beginner",
+    description:
+      "Learn design fundamentals, color theory, typography, and Adobe tools.",
+    image: "https://i.postimg.cc/3R2kJd7f/graphic-design.jpg",
+    category: "Design",
+  },
+];

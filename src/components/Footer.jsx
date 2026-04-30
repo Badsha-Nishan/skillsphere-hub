@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@heroui/react";
+import { FaFacebook } from "react-icons/fa";
+import { FaGithub, FaSquareInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -131,6 +133,24 @@ const Footer = () => {
                 Get Started
               </Button>{" "}
             </Link>
+            <p className="font-semibold mt-2">Social Links</p>
+            <div className="flex gap-3 items-center">
+              <Link href="/">
+                <span className="text-2xl hover:scale-50">
+                  <FaFacebook />
+                </span>
+              </Link>
+              <Link href="/">
+                <span className="text-2xl ">
+                  <FaSquareInstagram />
+                </span>
+              </Link>
+              <Link href="/">
+                <span className="text-2xl ">
+                  <FaGithub />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -139,7 +159,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} pixgen. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SkillSphere. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <Link

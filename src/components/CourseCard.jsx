@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CourseCard = () => {
+const CourseCard = ({course}) => {
     return (
         <div>
-            Course Card
+            {course.title}
         </div>
     );
 };
