@@ -49,7 +49,7 @@ const Navbar = () => {
             <li>
               <Link className="no-underline" href="/register">
                 {" "}
-                <Button className=" bg-linear-to-r from-[#2341b2] to-[#845af1]">
+                <Button className="bg-linear-to-r from-[#2341b2] to-[#845af1] hover:bg-linear-to-r hover:from-[#845af1] hover:to-[#2341b2] ">
                   Register
                 </Button>{" "}
               </Link>

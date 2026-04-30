@@ -7,7 +7,7 @@ import { FaGithub, FaSquareInstagram } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="relative mt-24">
-      <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
+      <div className="h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
       {/* Background Layer */}
       <div className="absolute inset-0 -z-10 bg-white dark:bg-[#0a0a0b]" />
@@ -129,14 +129,14 @@ const Footer = () => {
 
             <Link className="no-underline" href="/courses">
               {" "}
-              <Button className=" bg-linear-to-r from-[#2341b2] to-[#845af1]">
+              <Button className=" bg-linear-to-r from-[#2341b2] to-[#845af1] hover:bg-linear-to-r hover:from-[#845af1] hover:to-[#2341b2]">
                 Get Started
               </Button>{" "}
             </Link>
             <p className="font-semibold mt-2">Social Links</p>
             <div className="flex gap-3 items-center">
               <Link href="/">
-                <span className="text-2xl hover:scale-50">
+                <span className="text-2xl">
                   <FaFacebook />
                 </span>
               </Link>

@@ -27,7 +27,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link href={"/login"}>
-              <Button className="bg-linear-to-r from-[#2341b2] to-[#845af1]">
+              <Button className="bg-linear-to-r from-[#2341b2] to-[#845af1] hover:bg-linear-to-r hover:from-[#845af1] hover:to-[#2341b2]">
                 Get Started
               </Button>
             </Link>

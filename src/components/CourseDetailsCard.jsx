@@ -17,11 +17,9 @@ const CourseDetailsCard = ({ item }) => {
   } = item;
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Course Curriculum</h2>
-
       <Card className="border my-4">
         <div className="space-y-4">
-          <div className="flex gap-7">
+          <div className="flex flex-col md:flex-row gap-7">
             <div>
               <Image
                 className="rounded-md"
@@ -76,13 +74,14 @@ const CourseDetailsCard = ({ item }) => {
 
               <Link href={`/courses`}>
                 <Button variant="secondary" className={"w-full"}>
-                  Back
+                  See another course
                 </Button>
               </Link>
             </div>
           </div>
         </div>
       </Card>
+      <h2 className="text-2xl font-bold mb-4">Course Curriculum</h2>
       <ul className="space-y-3">
         <li className="p-3 border rounded-lg">Introduction to the Course</li>
         <li className="p-3 border rounded-lg">HTML & CSS Basics</li>

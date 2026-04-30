@@ -4,17 +4,7 @@ import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
 const CoursesCard = ({ course }) => {
-  const {
-    id,
-    title,
-    image,
-    instructor,
-    duration,
-    rating,
-    level,
-    description,
-    category,
-  } = course;
+  const { id, title, image, instructor, rating, category } = course;
   return (
     <div>
       <Card className="border my-4">
