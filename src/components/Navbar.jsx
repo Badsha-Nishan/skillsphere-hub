@@ -1,11 +1,64 @@
-import React from 'react';
+import { Link, Button } from "@heroui/react";
+import Image from "next/image";
 
 const Navbar = () => {
-    return (
-        <div>
-            Navbar
-        </div>
-    );
+  return (
+    <div>
+      {/* Basic */}
+      <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
+        <header className="flex h-16 items-center justify-between px-6">
+          <div className="flex items-center gap-3">
+            <Link href="/" className="no-underline">
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/logo.png"
+                  width={40}
+                  height={40}
+                  alt="Logo"
+                ></Image>
+                <p className="font-bold text-2xl">
+                  Skill{" "}
+                  <span className="text-[#2341b2]">
+                    Sphere <span className="text-[#845af1]">Hub</span>
+                  </span>
+                </p>
+              </div>
+            </Link>
+          </div>
+          <ul className="flex items-center gap-4">
+            <li>
+              <Link className="no-underline hover:underline" href="/courses">
+                {" "}
+                Courses{" "}
+              </Link>
+            </li>
+            <li>
+              <Link className="no-underline hover:underline" href="/profile">
+                {" "}
+                My Profile{" "}
+              </Link>
+            </li>
+            <li>
+              <Link className="no-underline" href="/login">
+                {" "}
+                <Button variant="outline" className="border border-blue-800">
+                  Login
+                </Button>{" "}
+              </Link>
+            </li>
+            <li>
+              <Link className="no-underline" href="/register">
+                {" "}
+                <Button className=" bg-linear-to-r from-[#2341b2] to-[#845af1]">
+                  Register
+                </Button>{" "}
+              </Link>
+            </li>
+          </ul>
+        </header>
+      </nav>
+    </div>
+  );
 };
 
 export default Navbar;
