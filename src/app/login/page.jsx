@@ -1,4 +1,5 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
   Button,
@@ -13,11 +14,28 @@ import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 
 const LoginPage = () => {
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(
       new FormData(e.currentTarget).entries()
     );
+    const { data, error } = await authClient.signIn.email({
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      callbackURL: "/",
+    });
+    if (error) {
+      alert(`"ERROR", ${error.message}`);
+    }
+    if (!error) {
+      alert("SignIn Successful!");
+    }
+  };
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
   };
   return (
     <div className="flex justify-center items-center py-12 bg-linear-to-r from-[#2341b2] to-[#845af1] h-screen">
@@ -83,9 +101,11 @@ const LoginPage = () => {
         <p className="text-white text-center">Or</p>
         <div>
           <Button
-            className={
-              "w-full border bg-linear-to-l from-[#2341b2] to-[#845af1] hover:bg-linear-to-l hover:from-[#845af1] hover:to-[#2341b2]"
-            }
+            onClick={handleGoogleSignIn}
+            className="w-full border bg-gradient-to-l from-[#2341b2] to-[#845af1]
+           bg-[length:200%_100%] bg-left
+           transition-all duration-200
+           hover:bg-right"
           >
             <FaGoogle />
             Login with Google

@@ -1,4 +1,5 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
   Button,
@@ -10,23 +11,49 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FaGoogle } from "react-icons/fa";
 
 const RegisterPage = () => {
-  const onSubmit = (e) => {
+  const router = useRouter();
+  const onSubmit = async (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(
       new FormData(e.currentTarget).entries()
     );
+    const { data, error } = await authClient.signUp.email({
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      image: formData.url,
+    });
+    if (error) {
+      alert(`"ERROR", ${error.message}`);
+    }
+    if (!error) {
+      alert("SignUp Successful!");
+      router.push("/login");
+    }
+  };
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
   };
   return (
     <div className="flex justify-center items-center py-12 bg-linear-to-r from-[#2341b2] to-[#845af1] h-screen">
-      <Form className="flex w-96 flex-col gap-4 space-y-4" onSubmit={onSubmit}>
+      <Form className="flex w-96 flex-col gap-3 space-y-2" onSubmit={onSubmit}>
         <h2 className="text-center text-2xl text-white font-bold">
           Create your account
         </h2>
         <TextField isRequired name="name" type="text">
           <Label className="text-white">Name</Label>
           <Input placeholder="Enter your name" />
+          <FieldError />
+        </TextField>
+        <TextField isRequired name="url" type="text">
+          <Label className="text-white">Image URL</Label>
+          <Input placeholder="Enter your Image Link" />
           <FieldError />
         </TextField>
         <TextField
@@ -70,11 +97,11 @@ const RegisterPage = () => {
           <FieldError />
         </TextField>
         <div className="flex gap-2">
-          <Button type="submit">
+          <Button className={"w-full"} type="submit">
             <Check />
             SignUp
           </Button>
-          <Button type="reset" variant="secondary">
+          <Button className={"w-full"} type="reset" variant="secondary">
             Reset
           </Button>
         </div>
@@ -83,6 +110,19 @@ const RegisterPage = () => {
           <Link className="underline text-red-400" href={"/login"}>
             Login
           </Link>
+        </div>
+        <p className="text-white text-center">Or</p>
+        <div>
+          <Button
+            onClick={handleGoogleSignIn}
+            className="w-full border bg-gradient-to-l from-[#2341b2] to-[#845af1]
+              bg-[length:200%_100%] bg-left
+              transition-all duration-200
+              hover:bg-right"
+          >
+            <FaGoogle />
+            Login with Google
+          </Button>
         </div>
       </Form>
     </div>
