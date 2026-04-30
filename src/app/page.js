@@ -1,4 +1,5 @@
 import CourseCard from "@/components/CourseCard";
+import LearningTips from "@/components/LearningTips";
 import { Button } from "@heroui/react";
 import Link from "next/link";
 
@@ -37,9 +38,9 @@ export default function Home() {
           <img src="/hero.png" alt="Hero" className="w-full max-w-md" />
         </div>
       </section>
-      <section>
         <CourseCard />
-      </section>
+      <LearningTips />
+      
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaDownload, FaHeart, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 const DetailsCard = ({ course }) => {
   const {
