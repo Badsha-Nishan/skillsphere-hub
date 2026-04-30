@@ -1,5 +1,6 @@
 import CourseCard from "@/components/CourseCard";
 import LearningTips from "@/components/LearningTips";
+import TopInstructors from "@/components/TopInstructors";
 import { Button } from "@heroui/react";
 import Link from "next/link";
 
@@ -40,7 +41,7 @@ export default function Home() {
       </section>
         <CourseCard />
       <LearningTips />
-      
+      <TopInstructors />
     </div>
   );
 }
