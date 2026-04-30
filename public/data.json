@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch with HTML, CSS, JavaScript, React, and Node.js.",
-    "image": "https://i.postimg.cc/0QbVxWm7/web-dev.jpg",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Master modern UI/UX design principles, wireframing, and prototyping using Figma.",
-    "image": "https://i.postimg.cc/XY7t8kZ3/uiux.jpg",
+    "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800",
     "category": "Design"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn SEO, social media marketing, email campaigns, and online branding strategies.",
-    "image": "https://i.postimg.cc/5y7qJk9m/marketing.jpg",
+    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800",
     "category": "Marketing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Build modern full-stack applications using React, Next.js, and server-side rendering.",
-    "image": "https://i.postimg.cc/7Y8hJk2p/react-next.jpg",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Intermediate",
     "description": "Learn Python, Pandas, NumPy, and data visualization for real-world data analysis.",
-    "image": "https://i.postimg.cc/9QxVh3Lm/python-data.jpg",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
     "category": "Data Science"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn design fundamentals, color theory, typography, and Adobe tools.",
-    "image": "https://i.postimg.cc/3R2kJd7f/graphic-design.jpg",
+    "image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800",
     "category": "Design"
   }
 ]

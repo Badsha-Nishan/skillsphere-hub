@@ -1,3 +1,4 @@
+import CourseCard from "@/components/CourseCard";
 import { Button } from "@heroui/react";
 import Link from "next/link";
 
@@ -35,6 +36,9 @@ export default function Home() {
         <div className="lg:w-1/2 flex justify-center">
           <img src="/hero.png" alt="Hero" className="w-full max-w-md" />
         </div>
+      </section>
+      <section>
+        <CourseCard />
       </section>
     </div>
   );
