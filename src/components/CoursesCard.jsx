@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
-const DetailsCard = ({ course }) => {
+const CoursesCard = ({ course }) => {
   const {
     id,
     title,
@@ -59,4 +59,4 @@ const DetailsCard = ({ course }) => {
   );
 };
 
-export default DetailsCard;
+export default CoursesCard;

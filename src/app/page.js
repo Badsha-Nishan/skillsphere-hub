@@ -1,4 +1,4 @@
-import CourseCard from "@/components/CourseCard";
+import Courses from "@/components/Courses";
 import LearningTips from "@/components/LearningTips";
 import TopInstructors from "@/components/TopInstructors";
 import { Button } from "@heroui/react";
@@ -39,7 +39,7 @@ export default function Home() {
           <img src="/hero.png" alt="Hero" className="w-full max-w-md" />
         </div>
       </section>
-      <CourseCard />
+      <Courses />
       <LearningTips />
       <TopInstructors />
     </div>

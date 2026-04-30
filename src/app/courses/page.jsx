@@ -1,4 +1,4 @@
-import DetailsCard from "@/components/DetailsCard";
+import CoursesCard from "@/components/CoursesCard";
 import React from "react";
 
 const AllCoursePage = async () => {
@@ -9,7 +9,7 @@ const AllCoursePage = async () => {
       <h2 className="text-3xl font-bold text-center py-5">All Course</h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {courses.map((course) => (
-          <DetailsCard key={course.id} course={course} />
+          <CoursesCard key={course.id} course={course} />
         ))}
       </div>
     </div>
