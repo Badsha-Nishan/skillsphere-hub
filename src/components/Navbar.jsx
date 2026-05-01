@@ -1,6 +1,6 @@
 "use client";
 import { authClient, useSession } from "@/lib/auth-client";
-import { Link, Button } from "@heroui/react";
+import { Link, Button, Avatar } from "@heroui/react";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -50,6 +50,14 @@ const Navbar = () => {
             {user && (
               <div className="flex items-center gap-2">
                 <p>Welcome {user?.name}!</p>
+                <Avatar>
+                  <Avatar.Image
+                    alt={user?.name}
+                    src={user?.image}
+                    referrerPolicy="no-referrer"
+                  />
+                  <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                </Avatar>
                 <Link className="no-underline" href="/">
                   {" "}
                   <Button
