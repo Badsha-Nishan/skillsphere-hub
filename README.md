@@ -1,36 +1,160 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 SkillSphere Hub
 
-## Getting Started
+## 📌 Project Overview
 
-First, run the development server:
+**SkillSphere Hub** is a modern online learning platform where users can explore skill-based courses, view detailed lessons, and enroll in programs like Web Development, Design, and Marketing.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The platform is built using Next.js App Router with a clean UI and responsive design, providing a smooth learning experience across all devices.
+
+---
+
+## 🚀 Live Site
+
+👉 https://skillsphere-hub.vercel.app/
+
+## 💻 GitHub Repository
+
+👉 https://github.com/Badsha-Nishan/skillsphere-hub
+
+---
+
+## ✨ Key Features
+
+- 🔐 **Authentication System**
+
+  - Email & Password login
+  - Google login integration
+  - Protected routes for course details
+
+- 📚 **Course Management**
+
+  - Browse all courses
+  - View course details
+  - Static course curriculum
+
+- 🔍 **Search Functionality**
+
+  - Search courses by title
+  - Button-based search system
+
+- 👤 **User Profile**
+
+  - View user information
+  - Update name & profile image
+
+- 🔥 **Dynamic Sections**
+
+  - Popular Courses
+  - Trending Courses
+  - Top Instructors
+  - Learning Tips
+
+- ⏳ **Loading States**
+
+  - Custom loading spinner
+  - Smooth user experience during data fetching
+
+- ⚠️ **Error Handling**
+
+  - Custom 404 Not Found page
+  - No crash on page reload
+
+---
+
+## 🎨 UI & Design
+
+- Fully responsive (Mobile, Tablet, Desktop)
+- Modern gradient-based design
+- Clean and user-friendly interface
+- Interactive hover effects
+
+---
+
+## 🛠️ Technologies Used
+
+- **Next.js (App Router)**
+- **React**
+- **Tailwind CSS**
+- **HeroUI**
+- **BetterAuth**
+- **React Icons**
+
+---
+
+## 📦 NPM Packages Used
+
+- @heroui/react
+- react-icons
+- react-hot-toast
+- next
+- tailwindcss
+
+---
+
+## ⚙️ Environment Variables
+
+Sensitive configuration keys (like authentication credentials) are secured using environment variables.
+
+Example:
+
+```
+NEXT_PUBLIC_AUTH_URL
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+ ┣ page.jsx
+ ┣ courses/
+ ┃ ┣ page.jsx
+ ┃ ┣ [id]/page.jsx
+ ┣ login/page.jsx
+ ┣ register/page.jsx
+ ┣ profile/page.jsx
 
-## Learn More
+components/
+ ┣ Navbar.jsx
+ ┣ Footer.jsx
+ ┣ CourseSearch.jsx
+ ┣ CoursesCard.jsx
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Challenges Implemented
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🔍 Course search functionality
+- 👤 Profile update feature
+- 🔐 Protected route implementation
+- 🎯 Clean App Router structure
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Responsiveness
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application is fully responsive and works seamlessly on:
+
+- Mobile devices
+- Tablets
+- Desktop screens
+
+---
+
+## 📄 Additional Notes
+
+- Minimum 10 meaningful Git commits maintained
+- No page crashes on reload
+- Smooth navigation with Next.js routing
+
+---
+
+## 🙌 Conclusion
+
+SkillSphere Hub demonstrates a complete modern web application with authentication, dynamic UI, and real-world features using Next.js and modern frontend technologies.
+
+---
