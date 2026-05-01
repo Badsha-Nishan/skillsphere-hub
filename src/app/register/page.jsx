@@ -12,9 +12,11 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { FaGoogle } from "react-icons/fa";
+import { useState } from "react";
+import { FaEyeSlash, FaGoogle, FaRegEye } from "react-icons/fa";
 
 const RegisterPage = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -72,10 +74,11 @@ const RegisterPage = () => {
           <FieldError />
         </TextField>
         <TextField
+          className={"relative"}
           isRequired
           minLength={8}
           name="password"
-          type="password"
+          type={showPassword ? "text" : "password"}
           validate={(value) => {
             if (value.length < 8) {
               return "Password must be at least 8 characters";
@@ -89,6 +92,13 @@ const RegisterPage = () => {
             return null;
           }}
         >
+          <button
+            type="button"
+            className="text-xl absolute right-3 top-8 btn-neutral btn"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <FaRegEye /> : <FaEyeSlash />}
+          </button>
           <Label className="text-white">Password</Label>
           <Input placeholder="Enter your password" />
           <Description className="text-red-200">

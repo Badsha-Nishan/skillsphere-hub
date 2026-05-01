@@ -36,6 +36,12 @@ const Navbar = () => {
           </div>
           <ul className="flex items-center gap-4">
             <li>
+              <Link className="no-underline hover:underline" href="/">
+                {" "}
+                Home{" "}
+              </Link>
+            </li>
+            <li>
               <Link className="no-underline hover:underline" href="/courses">
                 {" "}
                 Courses{" "}

@@ -11,9 +11,11 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
-import { FaGoogle } from "react-icons/fa";
+import { useState } from "react";
+import { FaEyeSlash, FaGoogle, FaRegEye } from "react-icons/fa";
 
 const LoginPage = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(
@@ -23,7 +25,7 @@ const LoginPage = () => {
       name: formData.name,
       email: formData.email,
       password: formData.password,
-      callbackURL: "/",
+      callbackURL: "/courses",
     });
     if (error) {
       alert(`"ERROR", ${error.message}`);
@@ -59,10 +61,11 @@ const LoginPage = () => {
           <FieldError />
         </TextField>
         <TextField
+          className={"relative"}
           isRequired
           minLength={8}
           name="password"
-          type="password"
+          type={showPassword ? "text" : "password"}
           validate={(value) => {
             if (value.length < 8) {
               return "Password must be at least 8 characters";
@@ -76,6 +79,13 @@ const LoginPage = () => {
             return null;
           }}
         >
+          <button
+            type="button"
+            className="text-xl absolute right-3 top-8 btn-neutral btn"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <FaRegEye /> : <FaEyeSlash />}
+          </button>
           <Label className="text-white">Password</Label>
           <Input placeholder="Enter your password" />
           <Description className="text-red-200">
