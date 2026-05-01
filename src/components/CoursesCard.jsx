@@ -38,7 +38,7 @@ const CoursesCard = ({ course }) => {
               <p>{rating}</p>
             </div>
           </div>
-          <Link href={`/courses/${id}`}>
+          <Link href={`/courses/all-course/${id}`}>
             <Button variant="secondary" className={"w-full"}>
               View Details
             </Button>
