@@ -1,7 +1,16 @@
+"use client";
+import { authClient, useSession } from "@/lib/auth-client";
 import { Link, Button } from "@heroui/react";
 import Image from "next/image";
 
 const Navbar = () => {
+  const userData = useSession();
+  const user = userData.data?.user;
+
+  const handleLogOut = async () => {
+    await authClient.signOut();
+  };
+
   return (
     <div className="sticky top-0 z-40">
       {/* Basic */}
@@ -38,27 +47,49 @@ const Navbar = () => {
                 My Profile{" "}
               </Link>
             </li>
-            <li>
-              <Link className="no-underline" href="/login">
-                {" "}
-                <Button variant="outline" className="border border-blue-800">
-                  Login
-                </Button>{" "}
-              </Link>
-            </li>
-            <li>
-              <Link className="no-underline" href="/register">
-                {" "}
-                <Button
-                  className="w-full border bg-gradient-to-l from-[#2341b2] to-[#845af1]
-           bg-[length:200%_100%] bg-left
-           transition-all duration-200
-           hover:bg-right"
-                >
-                  Register
-                </Button>{" "}
-              </Link>
-            </li>
+            {user && (
+              <div className="flex items-center gap-2">
+                <p>Welcome {user?.name}!</p>
+                <Link className="no-underline" href="/">
+                  {" "}
+                  <Button
+                    onClick={handleLogOut}
+                    variant="danger"
+                    className="border border-blue-800"
+                  >
+                    LogOut
+                  </Button>{" "}
+                </Link>
+              </div>
+            )}
+            {!user && (
+              <ul className="flex gap-2">
+                <li>
+                  <Link className="no-underline" href="/login">
+                    {" "}
+                    <Button
+                      variant="outline"
+                      className="border border-blue-800"
+                    >
+                      Login
+                    </Button>{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link className="no-underline" href="/register">
+                    {" "}
+                    <Button
+                      className="w-full border bg-linear-to-l from-[#2341b2] to-[#845af1]
+                    bg-[length:200%_100%] bg-left
+                    transition-all duration-200
+                    hover:bg-right"
+                    >
+                      Register
+                    </Button>{" "}
+                  </Link>
+                </li>
+              </ul>
+            )}
           </ul>
         </header>
       </nav>
