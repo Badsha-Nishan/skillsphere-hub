@@ -1,6 +1,7 @@
 import Courses from "@/components/Courses";
 import LearningTips from "@/components/LearningTips";
 import TopInstructors from "@/components/TopInstructors";
+import TrendingCourses from "@/components/TrendingCourses";
 import { Button } from "@heroui/react";
 import Link from "next/link";
 
@@ -42,6 +43,7 @@ export default function Home() {
       <Courses />
       <LearningTips />
       <TopInstructors />
+      <TrendingCourses />
     </div>
   );
 }

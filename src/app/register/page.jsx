@@ -14,6 +14,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaEyeSlash, FaGoogle, FaRegEye } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,10 +31,10 @@ const RegisterPage = () => {
       image: formData.url,
     });
     if (error) {
-      alert(`"ERROR", ${error.message}`);
+      toast.error(`"ERROR", ${error.message}`, { position: "top-center" });
     }
     if (!error) {
-      alert("SignUp Successful!");
+      toast.success("Register Successful", { position: "top-center" });
       router.push("/login");
     }
   };

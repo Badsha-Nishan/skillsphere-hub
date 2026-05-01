@@ -2,7 +2,6 @@ import { Card } from "@heroui/react";
 import Image from "next/image";
 
 const InsCard = ({ instructor }) => {
-  console.log(instructor);
   const { name, role, image, bio } = instructor;
   return (
     <div>

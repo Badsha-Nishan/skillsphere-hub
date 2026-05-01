@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { FaEyeSlash, FaGoogle, FaRegEye } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -28,10 +29,10 @@ const LoginPage = () => {
       callbackURL: "/courses",
     });
     if (error) {
-      alert(`"ERROR", ${error.message}`);
+      toast.error(`"ERROR", ${error.message}`, { position: "top-center" });
     }
     if (!error) {
-      alert("SignIn Successful!");
+      toast.success("Login Successful", { position: "top-center" });
     }
   };
   const handleGoogleSignIn = async () => {
