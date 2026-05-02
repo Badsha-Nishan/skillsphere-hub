@@ -3,6 +3,7 @@
 import { useState } from "react";
 import CoursesCard from "./CoursesCard";
 import { Button } from "@heroui/react";
+import EmptySearchResult from "./EmptySearchResult";
 
 const CourseSearch = ({ courses }) => {
   const [search, setSearch] = useState("");
@@ -34,9 +35,13 @@ const CourseSearch = ({ courses }) => {
         </div>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map((course) => (
-          <CoursesCard key={course.id} course={course} />
-        ))}
+        {filtered.length === 0 ? (
+          <EmptySearchResult />
+        ) : (
+          filtered.map((course) => (
+            <CoursesCard key={course.id} course={course} />
+          ))
+        )}
       </div>
     </div>
   );
