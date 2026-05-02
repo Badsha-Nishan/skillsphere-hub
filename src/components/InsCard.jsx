@@ -1,10 +1,20 @@
+import * as motion from "motion/react-client";
 import { Card } from "@heroui/react";
 import Image from "next/image";
 
 const InsCard = ({ instructor }) => {
   const { name, role, image, bio } = instructor;
   return (
-    <div>
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{
+        duration: 0.2,
+        delay: 0.5,
+        type: "spring",
+        stiffness: 100,
+      }}
+    >
       <Card className=" text-center p-4 mt-4 hover:scale-105 border transition duration-300">
         <Image
           className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
@@ -19,7 +29,7 @@ const InsCard = ({ instructor }) => {
           <p className="text-gray-500 text-sm">{bio}</p>
         </Card.Header>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 

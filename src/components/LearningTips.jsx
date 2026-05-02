@@ -1,5 +1,5 @@
-import { CircleDollar } from "@gravity-ui/icons";
-import { Card, Link } from "@heroui/react";
+import * as motion from "motion/react-client";
+import { Card } from "@heroui/react";
 
 const LearningTips = () => {
   return (
@@ -10,7 +10,17 @@ const LearningTips = () => {
           Boost your productivity and learn smarter with these proven techniques
         </p>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <motion.div
+        initial={{ x: 200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 0.2,
+          delay: 0.5,
+          type: "spring",
+          stiffness: 100,
+        }}
+        className="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+      >
         <Card className=" text-center p-4 mt-4 hover:scale-105 border transition duration-300">
           <Card.Header>
             <p className=" text-6xl py-2">⏱️</p>
@@ -57,7 +67,7 @@ const LearningTips = () => {
             </Card.Description>
           </Card.Header>
         </Card>
-      </div>
+      </motion.div>
     </div>
   );
 };
