@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +7,16 @@ import { FaStar } from "react-icons/fa";
 const CoursesCard = ({ course }) => {
   const { id, title, image, instructor, rating, category } = course;
   return (
-    <div>
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 0.2,
+        delay: 0.5,
+        type: "spring",
+        stiffness: 100,
+      }}
+    >
       <Card className="border my-4">
         <div className="space-y-4">
           <div className="w-full relative aspect-square">
@@ -45,7 +55,7 @@ const CoursesCard = ({ course }) => {
           </Link>
         </div>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 
