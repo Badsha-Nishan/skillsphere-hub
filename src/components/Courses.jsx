@@ -7,7 +7,11 @@ const Courses = async () => {
 
   return (
     <div>
-      <p className="text-xl font-semibold">Popular Courses</p>
+      <h2 className="text-3xl text-center mt-14 font-bold">Popular Courses</h2>
+      <p className="text-gray-500 mt-2 text-center mb-6">
+        Explore our most popular courses loved by thousands of learners
+        worldwide.
+      </p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {popularCourse.map((course) => (
           <CoursesCard key={course.id} course={course} />

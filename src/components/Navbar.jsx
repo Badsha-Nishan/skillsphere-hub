@@ -2,6 +2,7 @@
 import { authClient, useSession } from "@/lib/auth-client";
 import { Link, Button, Avatar } from "@heroui/react";
 import Image from "next/image";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   const userData = useSession();
@@ -36,22 +37,28 @@ const Navbar = () => {
           </div>
           <ul className="flex items-center gap-4">
             <li>
-              <Link className="no-underline hover:underline" href="/">
+              <NavLink className="no-underline hover:text-[#845af1]" href="/">
                 {" "}
                 Home{" "}
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="no-underline hover:underline" href="/courses">
+              <NavLink
+                className="no-underline hover:text-[#845af1]"
+                href="/courses"
+              >
                 {" "}
                 Courses{" "}
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="no-underline hover:underline" href="/profile">
+              <NavLink
+                className="no-underline hover:text-[#845af1]"
+                href="/profile"
+              >
                 {" "}
                 My Profile{" "}
-              </Link>
+              </NavLink>
             </li>
             {user && (
               <div className="flex items-center gap-2">

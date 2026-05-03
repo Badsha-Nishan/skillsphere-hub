@@ -4,8 +4,8 @@ import { Card } from "@heroui/react";
 const LearningTips = () => {
   return (
     <div className="py-4">
-      <div>
-        <h2 className="text-xl font-bold">Learning Tips</h2>
+      <div className="text-center mt-14 mb-6">
+        <h2 className="text-3xl font-bold">Learning Tips</h2>
         <p className="text-gray-500 mt-2">
           Boost your productivity and learn smarter with these proven techniques
         </p>
